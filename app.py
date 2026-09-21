@@ -1,3 +1,5 @@
+#/usr/bin/env python3
+
 import tkinter as tk
 from tkinter import messagebox
 
@@ -81,7 +83,7 @@ class NumberSystemConverterGUI:
             self.master, text="H to O", command=lambda: self.handle_convert(12))
         self.hexToOct_button.pack()
 
-        self.result_label = tk.Label(self.master, text="")
+        self.result_label = tk.Label(self.master, text="",font=("Algerian","bold",12))
         self.result_label.pack()
 
     def decimal_to_binary(self, decimal):
@@ -183,6 +185,6 @@ class NumberSystemConverterGUI:
 
 
 if __name__ == "__main__":
-    root = tk.Tk()
-    converter_gui = NumberSystemConverterGUI(root)
-    root.mainloop()
+    app = tk.Tk()
+    converter_gui = NumberSystemConverterGUI(app)
+    app.mainloop()
